@@ -124,6 +124,19 @@ nav.scrolled{background:color-mix(in srgb,var(--paper) 92%, transparent);backdro
 .section-head .right b{color:var(--ink);font-weight:500}
 @media(max-width:900px){.section{padding:64px 24px}.section-head{grid-template-columns:1fr;gap:24px;margin-bottom:40px}.section-head .right{justify-self:start}}
 
+/* CURRENT HIGHLIGHTS */
+.highlights{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--ink);border-left:1px solid var(--line)}
+.hl-card{padding:32px 30px 36px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper);position:relative;transition:background .25s}
+.hl-card:hover{background:var(--paper-2)}
+.hl-card .hl-tag{display:inline-flex;align-items:center;gap:8px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--signal);margin-bottom:18px}
+.hl-card .hl-tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--signal);animation:pulse 2.4s ease-in-out infinite}
+.hl-card .hl-venue{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--mid);margin-bottom:14px}
+.hl-card h4{font-family:'Instrument Serif',serif;font-size:clamp(22px,2vw,28px);line-height:1.18;letter-spacing:-.01em;color:var(--ink);margin-bottom:14px}
+.hl-card h4 em{font-style:italic;color:var(--signal)}
+.hl-card .hl-meta{font-size:13.5px;line-height:1.65;color:var(--mid)}
+.hl-card .hl-meta b{font-weight:500;color:var(--ink-2)}
+@media(max-width:760px){.highlights{grid-template-columns:1fr}}
+
 /* HOME STATEMENT */
 .statement{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
 .t-card{padding:32px 30px 36px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper);transition:background .2s}
@@ -356,6 +369,30 @@ footer{border-top:1px solid var(--line);background:var(--paper);padding-top:48px
   </div>
 </section>
 
+<section class="section" style="padding-bottom:64px">
+  <div class="inner">
+    <div class="section-head" style="margin-bottom:32px">
+      <div class="left"><span class="eyebrow"><span class="num">·</span>Current Research Highlights</span><h2 class="section-title">Forthcoming<br><em>conference work.</em></h2></div>
+      <div class="right"><p>Two accepted poster contributions advancing the <b>Communication &amp; AI Systems</b> field of the programme &mdash; on network architectures for human–AI interaction, and on conscious agency in interactive AI systems.</p></div>
+    </div>
+
+    <div class="highlights">
+      <article class="hl-card">
+        <div class="hl-tag">Accepted &middot; NetSci 2026</div>
+        <div class="hl-venue">Poster &middot; Cambridge, MA &middot; 1–5 June 2026</div>
+        <h4>From Large Language Models to <em>Large Communication Models</em>: A Network Architecture for Dyadic and Adaptive Human–AI Interaction</h4>
+        <p class="hl-meta"><b>Petzold &amp; Hotz</b> &middot; International School and Conference on Network Science.</p>
+      </article>
+      <article class="hl-card">
+        <div class="hl-tag">Accepted &middot; CogSci 2026</div>
+        <div class="hl-venue">Poster &middot; Rio de Janeiro, BR &middot; 22–25 July 2026</div>
+        <h4>Toward <em>Conscious Agency</em> in Artificial Intelligence: Evaluating and Bridging the Gap Between Phenomenological Principles and Interactive AI Systems</h4>
+        <p class="hl-meta"><b>Hotz &amp; Petzold</b> &middot; Annual Meeting of the Cognitive Science Society.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
 <section class="section">
   <div class="inner">
     <div class="section-head">
@@ -498,6 +535,26 @@ footer{border-top:1px solid var(--line);background:var(--paper);padding-top:48px
 
     <div class="rp-section">
       <div class="rp-grid">
+        <div class="rp-lab">F3 &middot; Current contributions</div>
+        <div>
+          <h2>Current conference<br><em>contributions.</em></h2>
+          <p>Two accepted poster contributions extending the <strong>Communication &amp; AI Systems</strong> field. Both develop the integrative architecture argument toward the design of human&ndash;AI interaction.</p>
+          <div style="margin-top:28px;border-top:1px solid var(--line)">
+            <div style="display:grid;grid-template-columns:100px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--line)">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--signal);padding-top:4px">NetSci 2026<br><span style="color:var(--mid);letter-spacing:.1em">1–5 June</span></div>
+              <div><p style="font-family:'Instrument Serif',serif;font-size:20px;line-height:1.25;letter-spacing:-.005em;color:var(--ink);margin-bottom:6px">From large language models to large communication models: A network architecture for dyadic and adaptive human&ndash;AI interaction</p><p style="font-size:13.5px;color:var(--mid);line-height:1.55;margin:0;max-width:none">Petzold, T., &amp; Hotz, L. (2026, June 1–5). [Poster presentation]. <em>NetSci 2026: International School and Conference on Network Science</em>, Cambridge, MA, United States.</p></div>
+            </div>
+            <div style="display:grid;grid-template-columns:100px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--line)">
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--signal);padding-top:4px">CogSci 2026<br><span style="color:var(--mid);letter-spacing:.1em">22–25 July</span></div>
+              <div><p style="font-family:'Instrument Serif',serif;font-size:20px;line-height:1.25;letter-spacing:-.005em;color:var(--ink);margin-bottom:6px">Toward conscious agency in artificial intelligence: Evaluating and bridging the gap between phenomenological principles and interactive AI systems</p><p style="font-size:13.5px;color:var(--mid);line-height:1.55;margin:0;max-width:none">Hotz, L., &amp; Petzold, T. (2026, July 22–25). [Poster presentation]. <em>CogSci 2026: Annual Meeting of the Cognitive Science Society</em>, Rio de Janeiro, Brazil.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rp-section">
+      <div class="rp-grid">
         <div class="rp-lab">§5 Trajectory</div>
         <div>
           <h2>What the programme<br><em>produces.</em></h2>
@@ -526,6 +583,26 @@ footer{border-top:1px solid var(--line);background:var(--paper);padding-top:48px
 
 <section class="section">
   <div class="inner">
+
+    <div class="trajectory">
+      <div class="traj-head">
+        <div class="tn" style="color:var(--signal)">C</div>
+        <div><h3>Current Conference Contributions</h3></div>
+        <div class="sub">F3 &middot; Communication &amp; AI Systems &middot; 2026 — accepted</div>
+      </div>
+      <div>
+        <div class="pub-row no-link">
+          <div class="yr">2026</div>
+          <div class="body"><p class="t">From Large Language Models to Large Communication Models: A Network Architecture for Dyadic and Adaptive Human–AI Interaction</p><p class="a">Petzold &amp; Hotz &mdash; [Poster presentation]. <em>NetSci 2026: International School and Conference on Network Science</em>, Cambridge, MA, United States, 1–5 June 2026.</p></div>
+          <div class="lk">NetSci 2026</div>
+        </div>
+        <div class="pub-row no-link">
+          <div class="yr">2026</div>
+          <div class="body"><p class="t">Toward Conscious Agency in Artificial Intelligence: Evaluating and Bridging the Gap Between Phenomenological Principles and Interactive AI Systems</p><p class="a">Hotz &amp; Petzold &mdash; [Poster presentation]. <em>CogSci 2026: Annual Meeting of the Cognitive Science Society</em>, Rio de Janeiro, Brazil, 22–25 July 2026.</p></div>
+          <div class="lk">CogSci 2026</div>
+        </div>
+      </div>
+    </div>
 
     <div class="trajectory">
       <div class="traj-head">
@@ -935,7 +1012,7 @@ footer{border-top:1px solid var(--line);background:var(--paper);padding-top:48px
         <p style="color:var(--mid);font-size:14px">Berlin, Germany · CET / CEST.</p>
       </div>
       <div class="contact-list">
-        <a href="/cdn-cgi/l/email-protection#790d57091c0d0316151d39141c1d1018540c17100f1c0b0a100d00571d1c"><span class="lab">Email</span><span class="val">t.petzold@<em>media-university.de</em></span><span class="arr">↗</span></a>
+        <a href="/cdn-cgi/l/email-protection#bbcf95cbdecfc1d4d7dffbd6dedfd2da96ced5d2cddec9c8d2cfc295dfde"><span class="lab">Email</span><span class="val">t.petzold@<em>media-university.de</em></span><span class="arr">↗</span></a>
         <a href="https://www.linkedin.com/in/tpetzold/" target="_blank" rel="noopener"><span class="lab">Network</span><span class="val"><em>LinkedIn</em> · tpetzold</span><span class="arr">↗</span></a>
         <a href="https://hmkw.academia.edu/ThomasPetzold" target="_blank" rel="noopener"><span class="lab">Archive</span><span class="val"><em>Academia</em>.edu</span><span class="arr">↗</span></a>
         <a href="https://www.researchgate.net/profile/Thomas-Petzold-3" target="_blank" rel="noopener"><span class="lab">Archive</span><span class="val"><em>Research</em>Gate</span><span class="arr">↗</span></a>
